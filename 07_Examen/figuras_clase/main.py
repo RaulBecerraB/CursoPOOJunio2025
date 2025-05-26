@@ -10,30 +10,24 @@ def main():
     
     try:
         opcion = int(input("Selecciona una figura:"))
-        
         # Calcular rectangulo
         if opcion == 1:
             try:
                 base = input("Ingresa la base:")
                 altura = input("Ingresa la altura:")
-                
                 rectangulo = Rectangulo(base, altura)
                 print(f"El área del rectángulo es: {rectangulo.calcular_area()}")
             except ValueError as e:
                 print(f"Error: {e}")
-            
         # Calcular triangulo
         elif opcion == 2:
             try:
                 base = input("Ingresa la base:")
                 altura = input("Ingresa la altura:")
-                
-                # La sanitización ahora se realiza dentro de la clase Triangulo
                 triangulo = Triangulo(base, altura)
                 print(f"El área del triangulo es: {triangulo.calcular_area()}")
             except ValueError as e:
                 print(f"Error: {e}")
-        
         # Calcular circulo
         elif opcion == 3:
             try:
