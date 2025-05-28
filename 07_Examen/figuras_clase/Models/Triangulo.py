@@ -43,4 +43,17 @@ class Triangulo(Figura):
         return self._altura
         
     def calcular_area(self):
+        """Calcula el área del triángulo usando los atributos de la instancia."""
         return (self._base * self._altura) / 2
+    
+    @staticmethod
+    def calcular_area_static(base, altura):
+        """Calcula el área de un triángulo sin necesidad de crear una instancia."""
+        # Validar los parámetros
+        if not isinstance(base, (int, float)) or base <= 0:
+            raise ValueError("La base debe ser un número positivo")
+        if not isinstance(altura, (int, float)) or altura <= 0:
+            raise ValueError("La altura debe ser un número positivo")
+            
+        return (base * altura) / 2
+

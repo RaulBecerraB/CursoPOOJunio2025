@@ -5,6 +5,7 @@ class Figura(ABC):
         
     @abstractmethod
     def calcular_area(self):
+        print("no hay fórmula para calcular el área")
         pass
     
     
